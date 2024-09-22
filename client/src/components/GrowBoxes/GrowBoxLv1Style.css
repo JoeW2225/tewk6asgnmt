@@ -1,0 +1,13 @@
+@media (min-width: 370px) {
+    .boxlv1 {
+        position: absolute;
+        top: 70vh;
+        right: 15.5vw;
+        width: 35vw;
+        height: 11vh;
+        background-color: #fdd7df;
+        z-index: 2;
+        
+    }
+}
+

@@ -1,0 +1,29 @@
+@media (min-width: 370px) {
+    .gPButnCont {
+        margin-top: 2vh;
+        cursor: pointer;
+        border-radius: 100%;
+        background-color: transparent;
+        border: none;
+        margin-left: 8vw;
+    }
+
+    .gPButnCont .sun {
+        width: 23vw;
+    }
+}
+
+@media (min-width: 1800px) {
+    .gPButnCont {
+        margin-top: 2vh;
+        cursor: pointer;
+        border-radius: 100%;
+        background-color: transparent;
+        border: none;
+        margin-left: 8vw;
+    }
+
+    .gPButnCont .sun {
+        width: 15vw;
+    }
+}

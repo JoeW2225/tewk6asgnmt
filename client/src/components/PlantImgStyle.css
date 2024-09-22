@@ -1,0 +1,15 @@
+@media (min-width: 370px) {
+    .plant {
+        width: 28vh;
+    }
+
+    .plantCont {
+        position: absolute;
+        top: 20vh;
+        right: 16vw;
+        width: 22vh;
+        z-index: 1;
+    }
+
+}
+

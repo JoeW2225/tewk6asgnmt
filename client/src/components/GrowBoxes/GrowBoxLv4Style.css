@@ -1,0 +1,12 @@
+@media (min-width: 370px) {
+    .boxlv4 {
+        position: absolute;
+        top: 33vh;
+        right: 15.5vw;
+        width: 35vw;
+        height: 15vh;
+        background-color: #fcd9e0;
+        z-index: 2;
+        
+    }
+}

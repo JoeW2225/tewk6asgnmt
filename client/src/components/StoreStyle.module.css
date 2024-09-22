@@ -1,0 +1,186 @@
+@media (min-width: 370px) {
+    .storeCont {
+        position: relative;
+        margin-top: 1vh;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1vw;
+        height: 160vh;
+        width: 36vw;
+        border: solid #f893ac 5px;
+        border-radius: 8px;
+        z-index: 3;
+    }
+
+    .storeCont h3 {
+        font-size: large;
+        
+    }
+
+    .storeCont .upgradesStyle {
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: 40vh;
+    }
+
+    .storeCont .upgradesStyle p {
+        font-weight: 500;
+    }
+
+    .storeCont .upgradesStyle .buyButnCont {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .storeCont .upgradesStyle .buyButn {
+        width: 20vw;
+        font-family: "Kalam", cursive;
+        font-weight: 500;
+        background-color: #fcd9e0;
+        border-color: #f893ac;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 520px) {
+    .storeCont h3 {
+        font-size: 4vw;
+        
+    }
+}
+
+@media (min-width: 680px) {
+    .storeCont {
+        position: relative;
+        margin-top: 1vh;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1vw;
+        height: 260vh;
+        width: 36vw;
+        border: solid #f893ac 5px;
+        border-radius: 8px;
+        z-index: 3;
+    }
+
+    .storeCont .upgradesStyle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: 60vh;
+    }
+
+    .storeCont .upgradesStyle .buyButnCont {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .storeCont .upgradesStyle .buyButn {
+        width: 20vw;
+        height: 6vh;
+        font-family: "Kalam", cursive;
+        font-weight: 500;
+        font-size: large;
+        background-color: #fcd9e0;
+        border-color: #f893ac;
+        border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 1060px) {
+    .storeCont {
+        position: relative;
+        margin-top: 1vh;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1vw;
+        height: 350vh;
+        width: 36vw;
+        border: solid #f893ac 5px;
+        border-radius: 8px;
+        z-index: 3;
+    }
+
+    .storeCont .upgradesStyle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        height: 70vh;
+    }
+
+    .storeCont .upgradesStyle .buyButnCont {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .storeCont .upgradesStyle .buyButn {
+        width: 20vw;
+        height: 6vh;
+        font-family: "Kalam", cursive;
+        font-weight: 500;
+        font-size: large;
+        background-color: #fcd9e0;
+        border-color: #f893ac;
+        border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 1800px) {
+    .storeCont {
+        position: relative;
+        margin-top: 1vh;
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1vw;
+        height: 290vh;
+        width: 26vw;
+        border: solid #f893ac 10px;
+        border-radius: 8px;
+        z-index: 3;
+    }
+
+    .storeCont .upgradesStyle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 2vw;
+        height: 50vh;
+    }
+
+    .storeCont .upgradesStyle .buyButnCont {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .storeCont .upgradesStyle .buyButn {
+        width: 15vw;
+        height: 6vh;
+        font-family: "Kalam", cursive;
+        font-weight: 500;
+        font-size: 2vw;
+        background-color: #fcd9e0;
+        border-color: #f893ac;
+        border-radius: 5px;
+    }
+}
