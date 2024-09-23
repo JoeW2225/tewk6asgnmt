@@ -18,7 +18,8 @@
 
 **React Hooks:**
 
-######useState:
+###### useState:
+
 When you use useState, you tell React to remember a specific value for this component, and you get back two things: the current value and a function to update that value.
 
 an example: const [count, setCount] = useState(0);
@@ -26,18 +27,72 @@ an example: const [count, setCount] = useState(0);
 count is the current value (initially 0), and setCount is the function to update it.
 we use setCount to update count, we don't update count directly.
 
-######useEffect:
+###### useEffect:
+
 It allows you to perform side effects in your components. Side effects are actions like fetching data, manually updating the DOM.
 
 useEffect runs after the component renders. You can think of it as a way to handle what needs to happen when the component loads or when certain values change.
 
 an example: useEffect(() => {
 console.log("Component mounted or updated");
-}, [dependency]);
+}, [count]);
 
-Here, the code inside useEffect runs after rendering. It will run again whenever the dependency changes.
+Here, refering back to the useState example- the code inside useEffect runs after rendering. It will run again whenever the count changes.
 
-######useCallback:
+###### useCallback:
+
+It remembers a function so it doesn't get re-created on every render. This is helpful to optimize performance when passing functions as props to child components. So it would only change if the depencdency (like count) changes.
+
+###### Bring it together:
+
+import React, { useState, useEffect, useCallback } from "react";
+
+const CounterComponent = () => {
+
+// Step 1: Create a piece of state called 'count'
+
+const [count, setCount] = useState(0);
+
+// Step 2: Create a memoized function using useCallback to handle button clicks:
+
+const handleClick = useCallback(() => {
+
+    setCount(prevCount => prevCount + 1);
+
+    // No dependencies, so the function is the same across renders:
+
+}, []);
+
+// Step 3: Run a side effect when 'count' changes using useEffect
+
+useEffect(() => {
+
+    console.log(`The count has changed to: ${count}`);
+
+    // Dependency array with `count`, so it runs whenever `count` changes:
+
+}, [count]);
+
+return (
+<div>
+<h1>Count: {count}</h1>
+{/_ Step 4: Button that triggers the memoized handleClick function _/}
+<button onClick={handleClick}>Increase Count</button>
+</div>
+);
+};
+
+export default CounterComponent;
+
+return (
+<div>
+<h1>Count: {count}</h1>
+{/_ Step 4: Button that triggers the memoized handleClick function _/}
+<button onClick={handleClick}>Increase Count</button>
+</div>
+);
+};
+export default CounterComponent;
 
 ---
 
