@@ -16,6 +16,31 @@
 
 ---
 
+**React Hooks:**
+
+######useState:
+When you use useState, you tell React to remember a specific value for this component, and you get back two things: the current value and a function to update that value.
+
+an example: const [count, setCount] = useState(0);
+
+count is the current value (initially 0), and setCount is the function to update it.
+we use setCount to update count, we don't update count directly.
+
+######useEffect:
+It allows you to perform side effects in your components. Side effects are actions like fetching data, manually updating the DOM.
+
+useEffect runs after the component renders. You can think of it as a way to handle what needs to happen when the component loads or when certain values change.
+
+an example: useEffect(() => {
+console.log("Component mounted or updated");
+}, [dependency]);
+
+Here, the code inside useEffect runs after rendering. It will run again whenever the dependency changes.
+
+######useCallback:
+
+---
+
 ### Gps.jsx -export default func: Gps
 
 #### (Child to GrowthPoints.jsx - export default func: GrowthComponent)
@@ -23,6 +48,8 @@
 import { useEffect } from "react"
 
 export default function Gps({ onGpsUpdate }) {
+
+^^^This is a React functional component called Gps. It receives a prop called onGpsUpdate (from parent GrowthPoints.jsx)
 
     useEffect(() => {
         const gpsInterval = setInterval(() => {
