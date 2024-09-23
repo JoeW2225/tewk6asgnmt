@@ -5,11 +5,8 @@ import BuyButnCont from './StoreStyle.module.css'
 import BuyButn from './StoreStyle.module.css'
 
 export default function StoreUpgrades({ growthPoints, setGrowthPoints, setGps }) {
-// 1 upgradeArr- the state, setUpgrades- the function doing the updating
-    const [upgradeArr, setUpgrades] = useState([])
 
-// 2 as we are getting the data externally, we don't want to re-render and fetch this everytime there's a change,
-// so we use useEffect on the fetch function, so we only call it on the initial load of the webpage
+    const [upgradeArr, setUpgrades] = useState([])
 
 useEffect(() => {
     console.log("storeUpgrades mounted")
@@ -18,9 +15,9 @@ useEffect(() => {
     console.log("stored upgrades:", storedUpgrades)
 
     if (storedUpgrades && storedUpgrades !== '[]') {
-        setUpgrades(JSON.parse(storedUpgrades)); // Load upgrades from localStorage if not empty
+        setUpgrades(JSON.parse(storedUpgrades)); 
     } else {
-        // Fetch upgrades from the API if not stored:
+    
         async function fetchStoreUpgrades() {
                 const response = await fetch('https://wk6asgnmtapi.onrender.com/plantupgrades');
                 const upgrades = await response.json();
@@ -31,7 +28,7 @@ useEffect(() => {
     },[]); 
 
 useEffect(() =>{
-    // Only store upgrades if they are non-empty
+    
     if (upgradeArr.length > 0) {
         localStorage.setItem('upgrades', JSON.stringify(upgradeArr));
     }
