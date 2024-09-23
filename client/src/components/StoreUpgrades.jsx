@@ -50,7 +50,8 @@ useEffect(() =>{
                             name: item.name,
                             cost: item.cost,
                             increase: item.increase,
-                            purchased: true, //mark upgrade when bought
+                            //mark upgrade when bought:
+                            purchased: true, 
                         }
                         : item
                 )
