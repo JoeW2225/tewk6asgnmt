@@ -72,7 +72,7 @@ export default function Gps({ onGpsUpdate }) {
 **I haven't fully optimized it for desktop (such as the plant being too small), as I mainly focused on getting mobile sorted. however, my next step**
 **would be to have the upgrades as a scrolling vertical menu, as it's looks naff going way beyond the screen.**
 
-**I used figma alot more this time round and spend more time planning. This helpful during the styling phase.**
+**I used figma alot more this time round and spent more time planning. This helpful during the styling phase.**
 
 **A slight regret was spending nearly all day Friday finishing the 3rd party URL set up that I had made, then getting it to**
 **fetch on my actual project. Because of this it set me back quite alot, meaning I ending up being behind on actually**
