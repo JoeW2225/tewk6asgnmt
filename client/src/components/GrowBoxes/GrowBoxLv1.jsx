@@ -3,6 +3,7 @@ import './GrowBoxLv1Style.css';
 
 
 export default function GrowBoxLv1({ growthPoints }) {
+    
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {

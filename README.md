@@ -375,6 +375,50 @@ _^^^another Ternary Operator aka if-else. If upgrade.purchased is true, then but
 
 ---
 
+### GrowBoxLv1.jsx -export default func: GrowBoxLv1
+
+#### Child to: GrowthPoints.jsx - export default func: GrowthComponent
+
+**Following applys to all GrowBox functions, just change in points requirement**
+
+import { useState, useEffect } from 'react';
+\*^^^standard imports as usual as wel are using these React hooks
+
+- import './GrowBoxLv1Style.css';
+  _^^^import styling_
+
+export default function GrowBoxLv1({ growthPoints }) {
+_^^^Here we are getting the growthPoints prop from the parent GrowthComponent in GrowPoints.jsx. We need this when we start asking the question of if the user has x points hide the box etc._
+
+    const [isVisible, setIsVisible] = useState(true);
+
+_^^^This sets up local state for the component to track whether the box is visible or not. Previously we have set a starting integer like 0 or 1 for the useState. However this time we want a Boolean value of true/false, so starting we want true as we want the box to be visible._
+
+    useEffect(() => {
+
+_^^^this hook will be checking the value of growthPoints everytime it changes_
+
+        if (growthPoints >= 1000) {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+    }, [growthPoints]);
+
+\*^^^If the growthPoints are greater than or equal to 1000, it hides the box by setting isVisible to false. Otherwise, it ensures that isVisible remains true. Within the dependancy array, the useEffect will run it's code everytime the growthPoints changes, Hence why growthPoints is in the array[].
+if (!isVisible) {
+
+        return null;
+    }
+
+_^^^this is crucial, we're saying here is: if NOT(!)isVisible, return nothing(null) to the DOM. this is so that it does not render anything and hides the box._
+return (
+<div className="boxlv1"></div>
+);
+}
+
+---
+
 **BRIEF REFLECTION**
 
 **I Will write out a indepth reflection on 23/09/24. There are many notes I have yet to add to this readme, as I**
