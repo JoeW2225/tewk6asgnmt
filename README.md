@@ -41,59 +41,6 @@ Here, refering back to the useState example- the code inside useEffect runs afte
 
 It remembers a function so it doesn't get re-created on every render. This is helpful to optimize performance when passing functions as props to child components. So it would only change if the depencdency (like count) changes.
 
-###### Bring it together:
-
-import React, { useState, useEffect, useCallback } from "react";
-
-const CounterComponent = () => {
-
-// Step 1: Create a piece of state called 'count'
-
-const [count, setCount] = useState(0);
-
-// Step 2: Create a memoized function using useCallback to handle button clicks:
-
-const handleClick = useCallback(() => {
-
-    setCount(prevCount => prevCount + 1);
-
-    // No dependencies, so the function is the same across renders:
-
-}, []);
-
-// Step 3: Run a side effect when 'count' changes using useEffect
-
-useEffect(() => {
-
-    console.log(`The count has changed to: ${count}`);
-
-    // Dependency array with `count`, so it runs whenever `count` changes:
-
-}, [count]);
-
-return (
-
-<div>
-<h1>Count: {count}</h1>
-{/_ Step 4: Button that triggers the memoized handleClick function _/}
-<button onClick={handleClick}>Increase Count</button>
-</div>
-);
-};
-
-export default CounterComponent;
-
-return (
-
-<div>
-<h1>Count: {count}</h1>
-{/_ Step 4: Button that triggers the memoized handleClick function _/}
-<button onClick={handleClick}>Increase Count</button>
-</div>
-);
-};
-export default CounterComponent;
-
 ---
 
 ### Gps.jsx -export default func: Gps
@@ -413,6 +360,7 @@ if (!isVisible) {
 
 _^^^this is crucial, we're saying here is: if NOT(!)isVisible, return nothing(null) to the DOM. this is so that it does not render anything and hides the box._
 return (
+
 <div className="boxlv1"></div>
 );
 }
